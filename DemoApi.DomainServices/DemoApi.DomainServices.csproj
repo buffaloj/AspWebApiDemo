@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BufTools.DI.ReflectionHelpers" Version="1.0.2" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore\BufTools.DataStore.csproj" />
+    <ProjectReference Include="..\DemoApi.Domain\DemoApi.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="StoredViews\" />
+  </ItemGroup>
+
+</Project>

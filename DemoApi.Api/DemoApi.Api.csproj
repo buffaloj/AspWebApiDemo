@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <DocumentationFile />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BufTools.Aggregation.FluentValidation" Version="1.0.4" />
+    <PackageReference Include="BufTools.DI.ReflectionHelpers" Version="1.0.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore.EntityFramework\BufTools.DataStore.EntityFramework.csproj" />
+    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore.Schema\BufTools.DataStore.Schema.csproj" />
+    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore\BufTools.DataStore.csproj" />
+    <ProjectReference Include="..\DemoApi.DomainServices\DemoApi.DomainServices.csproj" />
+    <ProjectReference Include="..\DemoApi.Domain\DemoApi.Domain.csproj" />
+    <ProjectReference Include="..\DemoApi.Infrastructure\DemoApi.Infrastructure.csproj" />
+    <ProjectReference Include="..\DemoApi.WorkFlows\DemoApi.WorkFlows.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\ApiResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ApiResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\ApiResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ApiResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="DemoApi.Api.Tests" />
+    <InternalsVisibleTo Include="DemoApi.Architecture.Tests" />
+  </ItemGroup>
+  
+</Project>
