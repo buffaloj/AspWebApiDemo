@@ -4,7 +4,7 @@ using DemoApi.Api.Extensions;
 using DemoApi.WorkFlows;
 using DemoApi.Domain;
 using DemoApi.DomainServices;
-using DemoApi.Infrastructure;
+using DemoApi.Database;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +12,7 @@ builder.Services.AddApi();
 builder.Services.AddDomain();
 builder.Services.AddDomainServices();
 builder.Services.AddWorkFlowServices();
-builder.Services.AddInfrastructure(builder.Configuration.GetConnectionString("DataStorage"));
+builder.Services.AddDatabase(builder.Configuration.GetConnectionString("DataStorage"));
 builder.Services.AddMultiValidation();
 
 builder.Services.AddControllers();

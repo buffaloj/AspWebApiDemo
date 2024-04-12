@@ -14,7 +14,7 @@ namespace DemoApi.Domain.Models
     public class Recipe
     {
         /// <summary>
-        /// The unique ID of the recipe
+        /// The unique ID
         /// </summary>
         /// <example>1</example>
         [Key]
@@ -56,11 +56,21 @@ namespace DemoApi.Domain.Models
         /// <example>3</example>
         public int MealTimeId { get; set; }
 
-        public ICollection<Ingredient> Ingredients { get; set; }
-        public ICollection<Instruction> Instructions { get; set; }
-
         #region Nav Properties
 
+        /// <summary>
+        /// Nav property used only during LINQ queries
+        /// </summary>
+        public ICollection<Ingredient> Ingredients { get; set; }
+
+        /// <summary>
+        /// Nav property used only during LINQ queries
+        /// </summary>
+        public ICollection<Instruction> Instructions { get; set; }
+
+        /// <summary>
+        /// Nav property used only during LINQ queries
+        /// </summary>
         [JsonIgnore]
         [ForeignKey(nameof(MealTimeId))]
         public virtual MealTime MealTime { get; set; }

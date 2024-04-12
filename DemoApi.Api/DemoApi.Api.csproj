@@ -21,9 +21,9 @@
     <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore.EntityFramework\BufTools.DataStore.EntityFramework.csproj" />
     <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore.Schema\BufTools.DataStore.Schema.csproj" />
     <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore\BufTools.DataStore.csproj" />
+    <ProjectReference Include="..\DemoApi.Database\DemoApi.Database.csproj" />
     <ProjectReference Include="..\DemoApi.DomainServices\DemoApi.DomainServices.csproj" />
     <ProjectReference Include="..\DemoApi.Domain\DemoApi.Domain.csproj" />
-    <ProjectReference Include="..\DemoApi.Infrastructure\DemoApi.Infrastructure.csproj" />
     <ProjectReference Include="..\DemoApi.WorkFlows\DemoApi.WorkFlows.csproj" />
   </ItemGroup>
 

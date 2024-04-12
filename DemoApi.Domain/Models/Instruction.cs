@@ -5,11 +5,23 @@ using System.Text.Json.Serialization;
 
 namespace DemoApi.Domain.Models
 {
+    /// <summary>
+    /// Represents an individual instruction used in a recipe
+    /// </summary>
     [StoredData]
     public class Instruction
     {
+        /// <summary>
+        /// The unique ID
+        /// </summary>
+        /// <example>1</example>
         [Key]
         public int Id { get; set; }
+
+        /// <summary>
+        /// The ID of the recipe the instruction is included in
+        /// </summary>
+        /// <example>1</example>
         public int RecipeId { get; set; }
 
         /// <summary>
@@ -24,12 +36,15 @@ namespace DemoApi.Domain.Models
         /// <example>1</example>
         public int Step { get; set; }
 
-#region Nav Properties
-        
+        #region Nav Properties
+
+        /// <summary>
+        /// Nav property used only during LINQ queries
+        /// </summary>
         [JsonIgnore]
         [ForeignKey(nameof(RecipeId))]
         public virtual Recipe Recipe { get; set; }
 
-#endregion
+        #endregion
     }
 }

@@ -7,6 +7,7 @@ namespace DemoApi.DomainServices.Functions
     /// <summary>
     /// A convenience class to hold funcs.  Any func in the class will be registered with data storage
     /// </summary>
+    /// <remarks>You must mark each function with [StoredFunction]</remarks>
     internal static partial class Funcs
     {
         //[StoredFunction("number_of_cars_owned", "dbo")]

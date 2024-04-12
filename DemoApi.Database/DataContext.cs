@@ -2,7 +2,7 @@
 using BufTools.DataStore.Schema;
 using Microsoft.EntityFrameworkCore;
 
-namespace DemoApi.Infrastructure
+namespace DemoApi.Database
 {
     /// <summary>
     /// A context class used by DataStorage to know what class to use for storage

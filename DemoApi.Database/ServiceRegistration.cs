@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using BufTools.DataStore;
 using BufTools.DataStore.EntityFramework;
 
-namespace DemoApi.Infrastructure
+namespace DemoApi.Database
 {
     /// <summary>
     /// Class to register Infrastructure related services
@@ -11,15 +11,12 @@ namespace DemoApi.Infrastructure
     public static class ServiceRegistration
     {
         /// <summary>
-        /// Adds infrastructure related dependencies to the service collection
+        /// Adds database related dependencies to the service collection
         /// </summary>
         /// <param name="services">The service collection to add to</param>
         /// <param name="connectionString">The connection string to the database</param>
-        public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
+        public static IServiceCollection AddDatabase(this IServiceCollection services, string connectionString)
         {
-            //services.AddDbContext<DataContext>(options => options.UseSqlServer(connectionString));
-            //services.AddScoped<IUnitOfWork, UnitOfWork<DataContext>>();
-
             services.AddDbContext<DataContext>(
                 options => options.UseSqlServer(connectionString, x => x.MigrationsAssembly("DemoApi.Infrastructure")),
                 ServiceLifetime.Scoped,
