@@ -2,6 +2,9 @@
 
 namespace DemoApi.Api.Filters
 {
+    /// <summary>
+    /// A collection of query filter params
+    /// </summary>
     public class RecipeFilter
     {
         /// <summary>

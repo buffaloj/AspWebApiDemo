@@ -6,7 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="BufTools.DI.ReflectionHelpers" Version="1.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.28">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.29">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>

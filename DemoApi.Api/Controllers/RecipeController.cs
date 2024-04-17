@@ -42,7 +42,7 @@ namespace Asp.DemoApi.Api.Controllers
         public async Task<IActionResult> Get(int id, CancellationToken cancellationToken = default(CancellationToken))
         {
             await _validator.For(id).Use<IdValidator>()
-                            .ValidateAsync();
+                            .ValidateAsync(cancellationToken);
 
             var person = await _recipeService.GetRecipe(id).FirstOrDefaultAsync(cancellationToken);
 

@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="BufTools.AspNet.EndpointReflection" Version="1.2.0" />
-    <PackageReference Include="BufTools.AspNet.InMemoryEndpointTesting" Version="1.0.2" />
     <PackageReference Include="BufTools.DI.ReflectionHelpers" Version="1.0.2" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.0.2" />
@@ -14,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\BufTools.AspNet.InMemoryEndpointTesting\BufTools.AspNet.InMemoryEndpointTesting\BufTools.AspNet.InMemoryEndpointTesting.csproj" />
     <ProjectReference Include="..\..\BufTools.ObjectCreation\BufTools.ObjectCreation.FromXmlComments\BufTools.ObjectCreation.FromXmlComments.csproj" />
     <ProjectReference Include="..\DemoApi.Api\DemoApi.Api.csproj" />
   </ItemGroup>

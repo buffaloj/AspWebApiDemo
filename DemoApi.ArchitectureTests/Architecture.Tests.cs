@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DemoApi.ArchitectureTests
@@ -36,7 +37,7 @@ namespace DemoApi.ArchitectureTests
             Assert.IsFalse(results.Any(r => r.Value < HttpStatusCode.OK || r.Value >= HttpStatusCode.Ambiguous));
         }
 
-        private async Task<KeyValuePair<string, HttpStatusCode>> CallEndpointAsync(HttpEndpoint endpoint)
+        private async Task<KeyValuePair<string, HttpStatusCode>> CallEndpointAsync(HttpEndpoint endpoint, CancellationToken cancellationToken = default(CancellationToken))
         {               
             var payload = (endpoint.BodyPayloadType != null ) ? _mother.Birth(endpoint.BodyPayloadType) : null;
 
@@ -48,16 +49,16 @@ namespace DemoApi.ArchitectureTests
             switch (endpoint.Verb)
             {
                 case HttpEndpoint.Verbs.Get:
-                    response = await request.GetAsync();
+                    response = await request.GetAsync(cancellationToken);
                     break;
                 case HttpEndpoint.Verbs.Post:
-                    response = await request.PostAsync();
+                    response = await request.PostAsync(cancellationToken);
                     break;
                 case HttpEndpoint.Verbs.Put:
-                    response = await request.PutAsync();
+                    response = await request.PutAsync(cancellationToken);
                     break;
                 case HttpEndpoint.Verbs.Delete:
-                    response = await request.DeleteAsync();
+                    response = await request.DeleteAsync(cancellationToken);
                     break;
             }
 
