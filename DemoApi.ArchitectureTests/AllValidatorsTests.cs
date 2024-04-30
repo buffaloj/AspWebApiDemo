@@ -6,14 +6,12 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Reflection;
 using System;
-//using BufTools.AspNet.EndpointReflection.Extensions;
 using BufTools.ObjectCreation.FromXmlComments;
-//using BufTools.ObjectCreation.FromXmlComments.Extensions;
 using DemoApi.Domain.Models;
-using BufTools.ObjectCreation.FromXmlComments.Extensions;
 using BufTools.ObjectCreation.FromXmlComments.Resources;
 using System.IO;
-using Microsoft.AspNetCore.Components.Forms;
+using BufTools.Extensions.Reflection;
+using BufTools.Extensions.XmlComments;
 
 namespace DemoApi.Architecture.Tests
 {
@@ -48,11 +46,11 @@ namespace DemoApi.Architecture.Tests
 
         private async Task<IEnumerable<string>> GetEnforcementErrors(Assembly assembly, ServiceProvider provider)
         { 
-           // var xmlDocs = assembly.LoadXmlDocumentation();
+            var xmlDocs = assembly.LoadXmlDocumentation();
 
             var errors = new List<string>();
 
-           /* var validatorTypes = assembly.GetClasses<IValidator>();
+            var validatorTypes = assembly.GetClasses<IValidator>();
             foreach (var type in validatorTypes)
             {
                 var classDoc = xmlDocs.GetDocumentation(type);
@@ -89,7 +87,6 @@ namespace DemoApi.Architecture.Tests
                     }
                 }
             }
-           */
 
             return errors;
         }

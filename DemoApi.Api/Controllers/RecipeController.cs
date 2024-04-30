@@ -2,8 +2,8 @@
 using MultiValidation;
 using DemoApi.Domain.Models;
 using DemoApi.DomainServices.Services;
-using Microsoft.EntityFrameworkCore;
 using DemoApi.Domain.PropertyValidators;
+using Microsoft.EntityFrameworkCore;
 
 namespace Asp.DemoApi.Api.Controllers
 {
@@ -44,7 +44,8 @@ namespace Asp.DemoApi.Api.Controllers
             await _validator.For(id).Use<IdValidator>()
                             .ValidateAsync(cancellationToken);
 
-            var person = await _recipeService.GetRecipe(id).FirstOrDefaultAsync(cancellationToken);
+            var person = await _recipeService.GetRecipe(id).AsAsyncEnumerable().ToListAsync(cancellationToken);
+            var person2 = await _recipeService.GetRecipe(id).FirstOrDefaultAsync(cancellationToken);
 
             return Ok(person);
         }

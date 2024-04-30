@@ -7,7 +7,7 @@ namespace DemoApi.Domain.PropertyValidators
     /// Validates an mealtime name
     /// </summary>
     /// <shouldpass value="Dinner"/>
-    /// <shouldfail value="f"/>
+    /// <shouldfail value=""/>
     public class MealTimeNameValidator : AbstractValidator<string>
     {
         /// <inheritdoc/>
