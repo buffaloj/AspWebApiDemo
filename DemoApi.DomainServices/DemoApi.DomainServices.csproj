@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BufTools.DI.ReflectionHelpers" Version="1.0.2" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore\BufTools.DataStore.csproj" />
+    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.DependencyInjection\BufTools.Extensions.DependencyInjection.csproj" />
     <ProjectReference Include="..\DemoApi.Domain\DemoApi.Domain.csproj" />
   </ItemGroup>
 

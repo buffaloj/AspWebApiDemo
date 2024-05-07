@@ -28,7 +28,7 @@ namespace DemoApi.ArchitectureTests
         }
 
         [TestMethod]
-        public async Task AllEndpoints_WithXmlExampleValues_Returns200Ok()
+        public async Task AllEndpoints_return_200OK_using_xml_example_values()
         {
             var endpoints = typeof(Program).Assembly.GetEndpoints();
             var tasks = endpoints.Select(e => CallEndpointAsync(e));

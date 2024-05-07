@@ -9,6 +9,7 @@ namespace DemoApi.Domain.PropertyValidators
     /// <shouldpass value="87554"/>
     /// <shouldfail value="0"/>
     /// <shouldfail value="-1"/>
+    [TestValidatorByExample]
     public class IdValidator : AbstractValidator<int>
     {
         /// <inheritdoc/>

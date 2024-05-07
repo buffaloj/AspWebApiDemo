@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\BufTools.AspNet.EndpointReflection\BufTools.AspNet.EndpointReflection\BufTools.AspNet.EndpointReflection.csproj" />
     <ProjectReference Include="..\..\BufTools.AspNet.InMemoryEndpointTesting\BufTools.AspNet.InMemoryEndpointTesting\BufTools.AspNet.InMemoryEndpointTesting.csproj" />
+    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.DependencyInjection\BufTools.Extensions.DependencyInjection.csproj" />
     <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.Reflection\BufTools.Extensions.Reflection.csproj" />
     <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.XmlComments\BufTools.Extensions.XmlComments.csproj" />
     <ProjectReference Include="..\..\BufTools.ObjectCreation\BufTools.ObjectCreation.FromXmlComments\BufTools.ObjectCreation.FromXmlComments.csproj" />

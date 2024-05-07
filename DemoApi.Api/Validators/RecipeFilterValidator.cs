@@ -1,4 +1,5 @@
 ﻿using DemoApi.Api.Filters;
+using DemoApi.Domain;
 using DemoApi.Domain.PropertyValidators;
 using FluentValidation;
 

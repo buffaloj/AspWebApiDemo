@@ -1,6 +1,6 @@
-﻿using BufTools.DI.ReflectionHelpers;
-using FluentValidation;
+﻿using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using BufTools.Extensions.DependencyInjection;
 
 namespace DemoApi.Domain
 {
