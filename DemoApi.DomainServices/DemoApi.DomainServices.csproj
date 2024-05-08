@@ -7,12 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BufTools.DataStore" Version="2.0.0" />
+    <PackageReference Include="BufTools.DataStore.Schema" Version="2.0.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore\BufTools.DataStore.csproj" />
-    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.DependencyInjection\BufTools.Extensions.DependencyInjection.csproj" />
     <ProjectReference Include="..\DemoApi.Domain\DemoApi.Domain.csproj" />
   </ItemGroup>
 

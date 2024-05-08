@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.DependencyInjection\BufTools.Extensions.DependencyInjection.csproj" />
     <ProjectReference Include="..\DemoApi.DomainServices\DemoApi.DomainServices.csproj" />
     <ProjectReference Include="..\DemoApi.Domain\DemoApi.Domain.csproj" />
   </ItemGroup>

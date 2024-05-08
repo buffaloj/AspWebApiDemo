@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BufTools.DataStore.EntityFramework" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.29">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -13,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore.EntityFramework\BufTools.DataStore.EntityFramework.csproj" />
-    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore.Schema\BufTools.DataStore.Schema.csproj" />
-    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore\BufTools.DataStore.csproj" />
-    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.DependencyInjection\BufTools.Extensions.DependencyInjection.csproj" />
     <ProjectReference Include="..\DemoApi.DomainServices\DemoApi.DomainServices.csproj" />
     <ProjectReference Include="..\DemoApi.Domain\DemoApi.Domain.csproj" />
   </ItemGroup>

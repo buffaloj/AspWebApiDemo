@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BufTools.DataStore.Schema" Version="2.0.0" />
+    <PackageReference Include="BufTools.Extensions.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="FluentValidation" Version="11.4.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
@@ -16,11 +18,6 @@
   <ItemGroup>
     <Folder Include="Constants\" />
     <Folder Include="Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\..\BufTools.DataStorage\BufTools.DataStore.Schema\BufTools.DataStore.Schema.csproj" />
-    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.DependencyInjection\BufTools.Extensions.DependencyInjection.csproj" />
   </ItemGroup>
 
   <ItemGroup>

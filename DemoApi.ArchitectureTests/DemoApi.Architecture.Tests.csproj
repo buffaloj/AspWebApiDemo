@@ -5,18 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BufTools.AspNet.EndpointReflection" Version="2.0.0" />
+    <PackageReference Include="BufTools.AspNet.InMemoryEndpointTesting" Version="1.0.3" />
+    <PackageReference Include="BufTools.Extensions.DependencyInjection" Version="2.0.0" />
+    <PackageReference Include="BufTools.FluentValidation.TestByExample" Version="1.0.0" />
+    <PackageReference Include="BufTools.ObjectCreation.FromXmlComments" Version="2.0.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.1" />
     <PackageReference Include="MSTest.TestAdapter" Version="3.0.2" />
     <PackageReference Include="MSTest.TestFramework" Version="3.0.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\BufTools.AspNet.EndpointReflection\BufTools.AspNet.EndpointReflection\BufTools.AspNet.EndpointReflection.csproj" />
-    <ProjectReference Include="..\..\BufTools.AspNet.InMemoryEndpointTesting\BufTools.AspNet.InMemoryEndpointTesting\BufTools.AspNet.InMemoryEndpointTesting.csproj" />
-    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.DependencyInjection\BufTools.Extensions.DependencyInjection.csproj" />
-    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.Reflection\BufTools.Extensions.Reflection.csproj" />
-    <ProjectReference Include="..\..\BufTools.Extensions\BufTools.Extensions.XmlComments\BufTools.Extensions.XmlComments.csproj" />
-    <ProjectReference Include="..\..\BufTools.ObjectCreation\BufTools.ObjectCreation.FromXmlComments\BufTools.ObjectCreation.FromXmlComments.csproj" />
     <ProjectReference Include="..\DemoApi.Api\DemoApi.Api.csproj" />
   </ItemGroup>
 </Project>
