@@ -34,8 +34,7 @@ namespace DemoApi.Architecture.Tests
 
             var errors = await _exampleTester.GetValidationErrors(services, types);
 
-            var message = !errors.Any() ? "No errors" : "\nSome validators have errors:\n" + string.Join("\n", errors);
-            Assert.IsFalse(errors.Any(), message);
+            Assert.IsFalse(errors.Any(), "\n" + string.Join("\n", errors));
         }
 
         [TestMethod]
